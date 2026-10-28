@@ -17,20 +17,19 @@ def test_error_types() -> None:
 
         try:
             garden_operations(op_num)
-        except ValueError as invalid:
-            print(f"Caught ValueError: {invalid}")
-        except ZeroDivisionError as invalid:
-            print(f"Caught ZeroDivisionError: {invalid}")
-        except FileNotFoundError as invalid:
-            print(f"Caught FileNotFoundError: {invalid}")
-        except TypeError as invalid:
-            print(f"Caught TypeError: {invalid}")
+        except ValueError as e:
+            print(f"Caught ValueError: {e}")
+        except ZeroDivisionError as e:
+            print(f"Caught ZeroDivisionError: {e}")
+        except FileNotFoundError as e:
+            print(f"Caught FileNotFoundError: {e}")
+        except TypeError as e:
+            print(f"Caught TypeError: {e}")
 
 
-print("All error types tested successfully!")
-
-print("=== Garden Error Types Demo ===")
-test_error_types()
-print("Operation completed successfully")
-print()
-print("All error types tested successfully!")
+if __name__ == "__main__":
+    print("=== Garden Error Types Demo ===")
+    test_error_types()
+    print("Operation completed successfully")
+    print()
+    print("All error types tested successfully!")
