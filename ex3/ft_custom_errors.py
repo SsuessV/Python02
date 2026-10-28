@@ -40,6 +40,7 @@ def test_water_err_as_garden() -> None:
     except GardenError as e:
         print("Caught GardenError:", e)
 
+
 if __name__ == "__main__":
     print("=== Custom Garden Errors Demo ===")
     print()

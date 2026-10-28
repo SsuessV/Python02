@@ -4,7 +4,7 @@ class GardenError(Exception):
 
 
 class PlantError(GardenError):
-    def __init__(self, msg="Unknown garden error"):
+    def __init__(self, msg="Unknown plant error"):
         super().__init__(msg)
 
 
@@ -27,8 +27,10 @@ def test_watering_system() -> None:
         return
     finally:
         print("Closing watering system")
+
     print()
     print("Testing invalid plants...")
+    print("Opening watering system")
     try:
         water_plant("Tomato")
         water_plant("lettuce")
